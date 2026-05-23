@@ -1,0 +1,7 @@
+grainpick_env/
+build/
+dist/
+checkpoints/
+__pycache__/
+*.pyc
+.DS_Store
