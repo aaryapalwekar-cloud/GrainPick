@@ -2,7 +2,16 @@
 
 Automated grain boundary detection and individual grain extraction from optical thin section images (PPL/XPL). Produces boundary-precise PNG crops ready for use as ML training data.
 
+GrainPick streamlines grain extraction by combining automatic segmentation (SAM/OpenCV) with interactive geological review, enabling rapid generation of boundary-precise mineral grain datasets for machine learning applications.
 ---
+## Features
+
+- Automatic grain segmentation using Meta SAM
+- Interactive correction workflow
+- Transparent PNG grain exports
+- Manifest-based dataset tracking
+- GPU / CPU compatible
+- Thin section workflow integration
 
 ## Quick start
 
@@ -127,4 +136,16 @@ For CPU-only machines, consider using `vit_b` (smaller, faster) checkpoint inste
 Once you have a library of labelled grain PNGs:
 1. Organise into folders by mineral class
 2. Fine-tune a vision classifier (e.g. EfficientNet, ConvNeXt) on your crops
-3. Or ask Claude to help build the classifier training pipeline
+3. Train downstream mineral classification models using extracted grain datasets.
+
+## Applications
+
+- Mineral classification dataset generation
+- Computational petrology workflows
+- Thin section digitisation
+- Geological image segmentation
+- Exploration and mineral intelligence pipelines
+
+## Citation
+
+If you use GrainPick in academic or exploration workflows, please cite this repository.
