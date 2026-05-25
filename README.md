@@ -43,7 +43,7 @@ bash setup.sh
 source grainpick_env/bin/activate
 
 # 3. Run on your image
-python grainpick.py --image my_thin_section.jpg
+python grainpick.py 
 ```
 
 ---
