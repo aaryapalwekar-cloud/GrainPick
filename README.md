@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner/GrainPick_banner.png" alt="GrainPick Banner">
+  <img src="assets/banner/GrainPick.png" alt="GrainPick Banner">
 </p>
 
 # GrainPick — Thin Section Grain Extractor
