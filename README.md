@@ -11,18 +11,18 @@ GrainPick streamlines grain extraction by combining automatic segmentation (SAM/
 ## Interface Preview
 
 ### Automatic Grain Detection
-![Automatic Detection](assets/screenshots/Auto_detected_grains.jpeg)
+![Automatic Detection](assests/screenshots/Auto_detected_grains.jpeg)
 
 ### Interactive Review Interface
-![Review Interface](assets/screenshots/Interface_1.png)
+![Review Interface](assests/screenshots/Interface_1.png)
 
 ### Manual Correction & Navigation
-![Manual Correction](assets/screenshots/Interface_2.png)
+![Manual Correction](assests/screenshots/Interface_2.png)
 
 ### Extracted Grain Outputs
-![Output Grain 1](assets/screenshots/Output_Olivine_XPL_0001.png)
+![Output Grain 1](assests/screenshots/Output_Olivine_XPL_0001.png)
 
-![Output Grain 2](assets/screenshots/Output_Olivine_XPL_0002.png)
+![Output Grain 2](assests/screenshots/Output_Olivine_XPL_0002.png)
 
 ## Features
 
