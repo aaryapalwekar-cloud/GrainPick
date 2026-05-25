@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner/GrainPick_banner.png" alt="GrainPick Banner">
+</p>
+
 # GrainPick — Thin Section Grain Extractor
 
 Automated grain boundary detection and individual grain extraction from optical thin section images (PPL/XPL). Produces boundary-precise PNG crops ready for use as ML training data.
