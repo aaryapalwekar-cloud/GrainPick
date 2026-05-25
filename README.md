@@ -14,7 +14,7 @@ GrainPick streamlines grain extraction by combining automatic segmentation (SAM/
 ### Interactive Review Interface
 ![Review Interface](assests/screenshots/Interface_1.png)
 
-### XPL/PPL toggle menu
+### XPL/PPL Menu
 ![XPL/PPL](assests/screenshots/Interface_2.png)
 
 ### Automatic Grain Detection
