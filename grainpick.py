@@ -602,13 +602,37 @@ class GrainPickerUI:
 
 def main():
     parser = argparse.ArgumentParser(description="GrainPick — thin section grain extractor")
-    parser.add_argument("--image",      required=True,              help="Path to thin section image")
+    parser.add_argument("--image",      default=None,               help="Path to thin section image (optional — opens GUI if not provided)")
     parser.add_argument("--output",     default="./grains",         help="Output directory for grain crops")
     parser.add_argument("--checkpoint", default=DEFAULT_CHECKPOINT, help="SAM model checkpoint path")
     parser.add_argument("--device",     default="auto",             help="cpu / cuda / mps / auto")
     parser.add_argument("--skip-auto",  action="store_true",        help="Skip auto-segmentation, manual only")
     args = parser.parse_args()
 
+    # ── No image provided — launch the full GUI app ──
+    if args.image is None:
+        print("[INFO] No image provided — launching GrainPick desktop app...")
+        try:
+            # Import and launch the GUI app
+            import importlib.util, pathlib
+            app_path = pathlib.Path(__file__).parent / "grainpick_app.py"
+            if app_path.exists():
+                spec = importlib.util.spec_from_file_location("grainpick_app", app_path)
+                module = importlib.util.module_from_spec(spec)
+                spec.loader.exec_module(module)
+                app = module.GrainPickApp()
+                app.mainloop()
+            else:
+                print("[ERROR] grainpick_app.py not found in the same folder.")
+                print("        Please run:  python grainpick_app.py")
+                sys.exit(1)
+        except Exception as e:
+            print(f"[ERROR] Could not launch GUI: {e}")
+            print("        Try running:  python grainpick_app.py  directly.")
+            sys.exit(1)
+        return
+
+    # ── Image provided — run CLI mode ──
     if not os.path.exists(args.image):
         print(f"[ERROR] Image not found: {args.image}")
         sys.exit(1)
