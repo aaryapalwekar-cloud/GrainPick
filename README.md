@@ -129,6 +129,11 @@ Edit the `SAM_AUTO_CONFIG` dict in `grainpick.py`:
 
 For CPU-only machines, consider using `vit_b` (smaller, faster) checkpoint instead of `vit_h`. Change `MODEL_TYPE = "vit_b"` in `grainpick.py` and download the matching checkpoint from the SAM releases page.
 
+## Platform Support
+
+The core GrainPick processing pipeline (`grainpick.py`) is cross-platform and can run on macOS, Linux, and Windows with the required Python dependencies installed.
+
+The interactive application interface (`grainpick_app.py`) is currently optimized and tested primarily on macOS systems (Apple Silicon / M-series).
 ---
 
 ## Next steps
