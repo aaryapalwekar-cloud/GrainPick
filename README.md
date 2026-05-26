@@ -36,14 +36,12 @@ GrainPick streamlines grain extraction by combining automatic segmentation (SAM/
 ## Quick start
 
 ```bash
-# 1. Setup (run once)
+# First time setup (run once)
 bash setup.sh
 
-# 2. Activate environment
+# Every time after
 source grainpick_env/bin/activate
-
-# 3. Run on your image
-python grainpick.py 
+python grainpick.py
 ```
 
 ---
